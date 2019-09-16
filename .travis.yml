@@ -19,11 +19,3 @@ deploy:
       branch: heroku_production
     app: probot-skyedat
 
-sudo: enabled
-language: python
-
-before_install:
-  - sudo apt-get update && sudo apt-get install -y python-yaml
-
-script:
-  - sudo python2 -c "from yaml import load, dump"
