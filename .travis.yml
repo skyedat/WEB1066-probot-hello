@@ -1,7 +1,7 @@
-sudo: required
-service:
+sudo: require
+services:
   - docker
-before_install:
+before_insatll:
   - docker pull node:8-onbuild
 
 install:
@@ -14,10 +14,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure:
-      lS9AEccHTBJ6hKr8+45ob/Me0awNYRsNc6VKSIenX1R8vujFd5RaBmBfA7uKZMoDhnOlCqzmf8JrncNxH/dtp7zP9lw9d1UB7/GljIn56QrosQwMLdbkgGV74w3dMLtRqoXYJE4llAP1bU1vq5/60Y8AwVaceZ5qWwemtdohtrjP1ZLw35xfAgUoQmeEfO0fwc3thsV85Pg5Ko8dqP0epfVKJRO7YubST+Fmz/cOp9jaZxm+u4advbtXgeo0iksSdZqDkXLQQ/7P8ttsb/ALJRQq6YI1Og6LocyNMtfy7mgHoRWLFftnnRLtffQgKdKjnDthSvszsGX7J2xeaEou3FeQ1qS+a/wydU2wFqEWnFKh5udvsR/OxvNOdR+Ad9qsI61OIEF328/pnY0zQj2QNWUVNvenGqKAFyT6+aZdzVFgLNJLxnyDPaqgSGt9UX/iZqS5Hn4+Xi9mJRlsv2Yy7dfxAVl4kUkbaVrT0F+T9hLMf4bzGfj9tMqPC+kU2tvR6YS0dMpBx1qkF8arekGAaqu3OM2k80875GkdFtuq9krLf7d8V3KAzH1eagEaC9eKtNX1eFWd3WF0X+CB7Z/ZbkgGCJsfYtFQzxvD2n09rlKhhmNjaeQy2xR9PgcSNeoahzwA6uhdj3IiL1vE2l6b5RCgdC91e/DM1Z3lg/qHLqo=
+    secure: lS9AEccHTBJ6hKr8+45ob/Me0awNYRsNc6VKSIenX1R8vujFd5RaBmBfA7uKZMoDhnOlCqzmf8JrncNxH/dtp7zP9lw9d1UB7/GljIn56QrosQwMLdbkgGV74w3dMLtRqoXYJE4llAP1bU1vq5/60Y8AwVaceZ5qWwemtdohtrjP1ZLw35xfAgUoQmeEfO0fwc3thsV85Pg5Ko8dqP0epfVKJRO7YubST+Fmz/cOp9jaZxm+u4advbtXgeo0iksSdZqDkXLQQ/7P8ttsb/ALJRQq6YI1Og6LocyNMtfy7mgHoRWLFftnnRLtffQgKdKjnDthSvszsGX7J2xeaEou3FeQ1qS+a/wydU2wFqEWnFKh5udvsR/OxvNOdR+Ad9qsI61OIEF328/pnY0zQj2QNWUVNvenGqKAFyT6+aZdzVFgLNJLxnyDPaqgSGt9UX/iZqS5Hn4+Xi9mJRlsv2Yy7dfxAVl4kUkbaVrT0F+T9hLMf4bzGfj9tMqPC+kU2tvR6YS0dMpBx1qkF8arekGAaqu3OM2k80875GkdFtuq9krLf7d8V3KAzH1eagEaC9eKtNX1eFWd3WF0X+CB7Z/ZbkgGCJsfYtFQzxvD2n09rlKhhmNjaeQy2xR9PgcSNeoahzwA6uhdj3IiL1vE2l6b5RCgdC91e/DM1Z3lg/qHLqo=
     on: heroku_production
     app: probot-skyedat
 
-
-      
