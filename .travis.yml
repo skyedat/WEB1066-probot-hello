@@ -1,7 +1,7 @@
 sudo: require
 services:
   - docker
-before_install:
+before_insatll:
   - docker pull node:8-onbuild
 
 install:
@@ -18,4 +18,4 @@ deploy:
       eIDbnY5ERbV3c/dfPASE+A+XaXuL7TdODl4jIiivSSYpGFwHIxZG+P4GGP8P/WCaur7qge9DJ6b3gf7gWjcSQxGzXfsRuYuyaYMghmRtWw7xSgGiaWwg89IrZNweLwBHtiMy2FIokMH7/oKN3EIwTE8u9HLRJRUXHnH5ypAau5WE1xvqcYsioC38vaWG5P3BE4cNDQTRkfYo6kD2VZ7LIvkLN6RkHgL2PFSjMp7LV7K36Q2Qj8e7u+aI8fUFpdqZfqtIkm7/rsmKAJoMeqmzNR1YYJgOiQfK69FEI9kCThA0JcfFlBCVNjxlntF4fiR+JoIlDdCq+CKE6axr0SkB8fJ2FCMrYGgKf9Flx1SyZhre75E9nsilChFhAp1SJis37pG2/L2ciuvUJvGsrdtpG0QjJGifeyoGl9J8FDR1pmi7WJ3gpX6C3uNnbTni69Q1+QQ97jThMVkzcFX/v1wiYFcl15pnoGy2C9mpQxWZW0am9f5td/waYX37vnJqbpn83ArFV2Bwvn3BseMYpnHrhGHOdj9MBaMtWCNd9Hz5XNkHSfbgPqAniIgz3VmPdtzbef4pDEVdvAJfK6dYDO3IF9x1UwnXcb6VMn7OdLah0rheUxE9XU5kqNqhnLZW/goKzYRpfC2LMi7pR12lmLpKKF6dJJDWTGLzrtaIKP+r5yY=
     on: heroku_production
     app: probot-skyedat
-  
+
