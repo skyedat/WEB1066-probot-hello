@@ -1,20 +1,17 @@
 sudo: require
 services:
-  - docker
-before_insatll:
-  - docker pull node:8-onbuild
-
+- docker
+before_install:
+- docker pull node:8-onbuild
 install:
-  - docker build -t probot-hello .
-
+- docker build -t probot-hello .
 script:
-  - docker run --rm probot-hello npm run test
-  - docker run --rm probot-hello npm run lint
-
+- docker run --rm probot-hello npm run test
+- docker run --rm probot-hello npm run lint
 deploy:
   provider: heroku
   api_key:
-    secure: AAAAB3NzaC1yc2EAAAADAQABAAACAQDH9QnJ9C+0oYofjjIIg9OgDbRNgDwpruyGB3OAu0OLZlov5PUUr95YJfZvYcqILo/lACIXxZ/fTGLX2xXVkNtYVKpjlXHd8HaobOEF1t7/SibE2GR82lJNdqZfupM43SZk1kEOlQKSgv0sxkbY4VUyFllEsBCGHj+vSKfO7+ZGjRJiMzZFeKft09JWlImocu2W+6OMb6qYQ4nhGXMLrqL+aYiCe72CWuGAhKE6Dw7tv75gD8DoYE4UaFOhEW2ZxZUr/SiyQHaBOrS71b2xZ/eXH38ll5z9UXMacGgLPa+hpB/k8tyNd+MXbZrHHnDZnu+EBnwH5lOpsssTR8h/c2jr2m+5zY+gBr1Mj2qF4vYaHD0MTChB+FtTLxt2WRs1g9H2EOsRU/VW/gD4cQtiXFwn3nInJp0BNWU/qO1W40xqSfluDyqVLOmAo49KK1wldEhFvtFxKLI/Au5a2WPHviBswPdNFMslYpRjR3Hs9U6MnVr0dU9wAJ88BQa/ZjLAB67xrj5pCoCXXDigkguO6JH9iH0Y9Yh74h+8m7mO2F7fz6L6twZYAvoIVoeyGyJcZt6TcOvNabTwUpgkz4HeltqXV2EnamTddFyGR2g9EGD2BtmeOetgtU3S3M3wtYcR3XyQZZhBypTha4hUPureMXOMinvtn5Q6sfmwUhxm+pScAQ==
-    on: heroku_production
-    app: probot-skyedat
-
+    secure: tyGLc5YYO7Zwkd3ALpUO0+tVYW+it6geoHuAtkMpv91Q7HuAdYJ6lnBxMPjjAcXaVzdOe64cGJ4NRtXUOKSu9j/e11vVM+K0rA1ChNQAtZQiBHARgyBPOQJvMML5SqYGP0M2qsf1GENejkb+H6A9AUhc4QgXKGjrjwslOYhC0PxQnVSDXtMMh2eWgUDPVFI8H6qskPKwZIux3Nx81fKLxFW2J5S3Fe2f0jVscZFdkwo/3YZiFZKIEL3ePMPjZshi00N6Jh+S2SBryA8WsukacRNDoOVSZtTUTyfHXFH/HIl7EqtE0FRAyz0w4/kgiCoRA1o4nFagLeTTg1nyyWWD7AuH/zf0tmXCLXs7HOE3D9EcfTVoImIFK1ZVcXHSN8FFssYRouz43At/M9CKrIXw9dEIuI7VgYZzyTEbSroRIGSTMIcHycxFxdY9JaBCvn6enkdaOucGE6GNsUj7AvISnRRhHCVUTXlev/pWFDXqbyFINhK8N2WqxSPdEEaaRCXcob43Vqh7N7ntShHfePSAQLd8QfgYr6eExumCGjRf8raMhvKArr5u23+A6+q0KO9e8FiKnR4ItvU3YQgNtqMM9a0fJaDDW8njUC44+GGvaM0tk3hRWHejXp5APy/C61aOwsHyXcvskvkpsB0/+x8afPnaXn0XExEkGUunfmKA0aw=
+  on: heroku_production
+  app: probot-skyedat
+  
